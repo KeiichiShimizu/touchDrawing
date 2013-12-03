@@ -9,6 +9,7 @@
 #import "COINSViewController.h"
 
 @interface COINSViewController ()
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *view;
 
 @end
 

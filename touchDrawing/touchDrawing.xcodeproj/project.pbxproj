@@ -22,6 +22,9 @@
 		827FC9FC183DC395005A4D4F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827FC9DB183DC395005A4D4F /* UIKit.framework */; };
 		827FCA04183DC395005A4D4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 827FCA02183DC395005A4D4F /* InfoPlist.strings */; };
 		827FCA06183DC395005A4D4F /* touchDrawingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 827FCA05183DC395005A4D4F /* touchDrawingTests.m */; };
+		82CE4996184C5FED00B0EA6D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CE4995184C5FED00B0EA6D /* OpenGLES.framework */; };
+		82CE4998184C5FF600B0EA6D /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CE4997184C5FF600B0EA6D /* GLKit.framework */; };
+		82CE499C184D9C2C00B0EA6D /* COINSQuestionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CE499B184D9C2C00B0EA6D /* COINSQuestionData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,10 @@
 		827FCA01183DC395005A4D4F /* touchDrawingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "touchDrawingTests-Info.plist"; sourceTree = "<group>"; };
 		827FCA03183DC395005A4D4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		827FCA05183DC395005A4D4F /* touchDrawingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = touchDrawingTests.m; sourceTree = "<group>"; };
+		82CE4995184C5FED00B0EA6D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		82CE4997184C5FF600B0EA6D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		82CE499A184D9C2C00B0EA6D /* COINSQuestionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSQuestionData.h; sourceTree = "<group>"; };
+		82CE499B184D9C2C00B0EA6D /* COINSQuestionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSQuestionData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CE4998184C5FF600B0EA6D /* GLKit.framework in Frameworks */,
+				82CE4996184C5FED00B0EA6D /* OpenGLES.framework in Frameworks */,
 				827FC9DA183DC395005A4D4F /* CoreGraphics.framework in Frameworks */,
 				827FC9DC183DC395005A4D4F /* UIKit.framework in Frameworks */,
 				827FC9D8183DC395005A4D4F /* Foundation.framework in Frameworks */,
@@ -103,6 +112,8 @@
 		827FC9D6183DC395005A4D4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82CE4997184C5FF600B0EA6D /* GLKit.framework */,
+				82CE4995184C5FED00B0EA6D /* OpenGLES.framework */,
 				827FC9D7183DC395005A4D4F /* Foundation.framework */,
 				827FC9D9183DC395005A4D4F /* CoreGraphics.framework */,
 				827FC9DB183DC395005A4D4F /* UIKit.framework */,
@@ -114,6 +125,7 @@
 		827FC9DD183DC395005A4D4F /* touchDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				82CE4999184D9B9700B0EA6D /* classFile */,
 				827FC9E6183DC395005A4D4F /* COINSAppDelegate.h */,
 				827FC9E7183DC395005A4D4F /* COINSAppDelegate.m */,
 				827FC9E9183DC395005A4D4F /* Main_iPhone.storyboard */,
@@ -153,6 +165,16 @@
 				827FCA02183DC395005A4D4F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		82CE4999184D9B9700B0EA6D /* classFile */ = {
+			isa = PBXGroup;
+			children = (
+				82CE499A184D9C2C00B0EA6D /* COINSQuestionData.h */,
+				82CE499B184D9C2C00B0EA6D /* COINSQuestionData.m */,
+			);
+			name = classFile;
+			path = ../../../classFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +225,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "COINS Project AID";
 				TargetAttributes = {
+					827FC9D3183DC395005A4D4F = {
+						DevelopmentTeam = 4N4S7F9NWS;
+					};
 					827FC9F7183DC395005A4D4F = {
 						TestTargetID = 827FC9D3183DC395005A4D4F;
 					};
@@ -254,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CE499C184D9C2C00B0EA6D /* COINSQuestionData.m in Sources */,
 				827FC9E4183DC395005A4D4F /* main.m in Sources */,
 				827FC9F1183DC395005A4D4F /* COINSViewController.m in Sources */,
 				827FC9E8183DC395005A4D4F /* COINSAppDelegate.m in Sources */,
@@ -393,10 +419,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "touchDrawing/touchDrawing-Prefix.pch";
 				INFOPLIST_FILE = "touchDrawing/touchDrawing-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,10 +435,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "touchDrawing/touchDrawing-Prefix.pch";
 				INFOPLIST_FILE = "touchDrawing/touchDrawing-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -475,6 +507,7 @@
 				827FCA0B183DC395005A4D4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		827FCA0C183DC395005A4D4F /* Build configuration list for PBXNativeTarget "touchDrawingTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +516,7 @@
 				827FCA0E183DC395005A4D4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
