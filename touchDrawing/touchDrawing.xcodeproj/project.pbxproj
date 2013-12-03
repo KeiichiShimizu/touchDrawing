@@ -25,6 +25,8 @@
 		82CE4996184C5FED00B0EA6D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CE4995184C5FED00B0EA6D /* OpenGLES.framework */; };
 		82CE4998184C5FF600B0EA6D /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CE4997184C5FF600B0EA6D /* GLKit.framework */; };
 		82CE499C184D9C2C00B0EA6D /* COINSQuestionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CE499B184D9C2C00B0EA6D /* COINSQuestionData.m */; };
+		82CE49A3184DB39F00B0EA6D /* COINSDrawState.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CE49A2184DB39F00B0EA6D /* COINSDrawState.m */; };
+		82CE49A6184DB3C100B0EA6D /* COINSDrawContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CE49A5184DB3C100B0EA6D /* COINSDrawContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		82CE4997184C5FF600B0EA6D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		82CE499A184D9C2C00B0EA6D /* COINSQuestionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSQuestionData.h; sourceTree = "<group>"; };
 		82CE499B184D9C2C00B0EA6D /* COINSQuestionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSQuestionData.m; sourceTree = "<group>"; };
+		82CE49A1184DB39F00B0EA6D /* COINSDrawState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSDrawState.h; sourceTree = "<group>"; };
+		82CE49A2184DB39F00B0EA6D /* COINSDrawState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSDrawState.m; sourceTree = "<group>"; };
+		82CE49A4184DB3C100B0EA6D /* COINSDrawContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSDrawContext.h; sourceTree = "<group>"; };
+		82CE49A5184DB3C100B0EA6D /* COINSDrawContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSDrawContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 		827FC9DD183DC395005A4D4F /* touchDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				82CE499D184DB2FF00B0EA6D /* stateMachine */,
 				82CE4999184D9B9700B0EA6D /* classFile */,
 				827FC9E6183DC395005A4D4F /* COINSAppDelegate.h */,
 				827FC9E7183DC395005A4D4F /* COINSAppDelegate.m */,
@@ -177,6 +184,18 @@
 			path = ../../../classFile;
 			sourceTree = "<group>";
 		};
+		82CE499D184DB2FF00B0EA6D /* stateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				82CE49A1184DB39F00B0EA6D /* COINSDrawState.h */,
+				82CE49A2184DB39F00B0EA6D /* COINSDrawState.m */,
+				82CE49A4184DB3C100B0EA6D /* COINSDrawContext.h */,
+				82CE49A5184DB3C100B0EA6D /* COINSDrawContext.m */,
+			);
+			name = stateMachine;
+			path = ../../../stateMachine;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,7 +245,7 @@
 				ORGANIZATIONNAME = "COINS Project AID";
 				TargetAttributes = {
 					827FC9D3183DC395005A4D4F = {
-						DevelopmentTeam = 4N4S7F9NWS;
+						DevelopmentTeam = RM3N4N4RRF;
 					};
 					827FC9F7183DC395005A4D4F = {
 						TestTargetID = 827FC9D3183DC395005A4D4F;
@@ -279,7 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CE49A3184DB39F00B0EA6D /* COINSDrawState.m in Sources */,
 				82CE499C184D9C2C00B0EA6D /* COINSQuestionData.m in Sources */,
+				82CE49A6184DB3C100B0EA6D /* COINSDrawContext.m in Sources */,
 				827FC9E4183DC395005A4D4F /* main.m in Sources */,
 				827FC9F1183DC395005A4D4F /* COINSViewController.m in Sources */,
 				827FC9E8183DC395005A4D4F /* COINSAppDelegate.m in Sources */,
@@ -426,6 +447,7 @@
 				INFOPLIST_FILE = "touchDrawing/touchDrawing-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -442,6 +464,7 @@
 				INFOPLIST_FILE = "touchDrawing/touchDrawing-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

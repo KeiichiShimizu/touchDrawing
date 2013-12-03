@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GLKit/GLKit.h>
 
-@interface COINSViewController : UIViewController
+@interface COINSViewController : GLKViewController{
+    GLuint vertexBufferID;
+}
+@property (strong, nonatomic) GLKBaseEffect *baseEffect;
 
 @end
