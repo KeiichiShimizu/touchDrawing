@@ -16,6 +16,7 @@
 @implementation COINSViewController
 
 @synthesize baseEffect;
+@synthesize glView;
 
 typedef struct {
     GLKVector3 position;
@@ -54,16 +55,19 @@ static const Vertex vertices[] =
     
     self.baseEffect = [[GLKBaseEffect alloc] init];
     self.baseEffect.useConstantColor = GL_TRUE;
-    self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
+    self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 0.0f, 1.0f);
+    
+    //self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
     
     
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     
     
     glGenBuffers(1, &vertexBufferID);
     glBindBuffer(GL_ARRAY_BUFFER, vertexBufferID);
     
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    [self showGrid];
     
 }
 #pragma mark - GLKView delegate
@@ -74,6 +78,7 @@ static const Vertex vertices[] =
     glEnableVertexAttribArray(GLKVertexAttribPosition);
     glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), NULL);
     glDrawArrays(GL_TRIANGLES, 0, 3);
+
 }
 -(void)viewDidUnload
 {
@@ -85,6 +90,20 @@ static const Vertex vertices[] =
     }
     view.context = nil;
     [EAGLContext setCurrentContext:nil];
+}
+
+-(void)showGrid{
+    Vertex gridPoints1[] =
+    {
+        {-1.0f, 1.0f, 0.0},
+        {-1.0f, -1.0f, 0.0}
+    };
+    [self.baseEffect prepareToDraw];
+    glClear(GL_COLOR_BUFFER_BIT);
+    glEnableVertexAttribArray(GLKVertexAttribPosition);
+    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), NULL);
+    glDrawArrays(GL_LINE_LOOP, 0, 2);
+    
 }
 
 - (void)didReceiveMemoryWarning

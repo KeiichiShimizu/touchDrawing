@@ -13,5 +13,6 @@
     GLuint vertexBufferID;
 }
 @property (strong, nonatomic) GLKBaseEffect *baseEffect;
+@property (strong, nonatomic) IBOutletCollection(GLKView) NSArray *glView;
 
 @end
