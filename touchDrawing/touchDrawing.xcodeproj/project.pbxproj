@@ -27,6 +27,7 @@
 		82CE499C184D9C2C00B0EA6D /* COINSQuestionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CE499B184D9C2C00B0EA6D /* COINSQuestionData.m */; };
 		82CE49A3184DB39F00B0EA6D /* COINSDrawState.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CE49A2184DB39F00B0EA6D /* COINSDrawState.m */; };
 		82CE49A6184DB3C100B0EA6D /* COINSDrawContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CE49A5184DB3C100B0EA6D /* COINSDrawContext.m */; };
+		82FBCB14184F8EEE0018D894 /* COINSViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FBCB13184F8EEE0018D894 /* COINSViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		82CE49A2184DB39F00B0EA6D /* COINSDrawState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSDrawState.m; sourceTree = "<group>"; };
 		82CE49A4184DB3C100B0EA6D /* COINSDrawContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSDrawContext.h; sourceTree = "<group>"; };
 		82CE49A5184DB3C100B0EA6D /* COINSDrawContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSDrawContext.m; sourceTree = "<group>"; };
+		82FBCB12184F8EEE0018D894 /* COINSViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSViewController2.h; sourceTree = SOURCE_ROOT; };
+		82FBCB13184F8EEE0018D894 /* COINSViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSViewController2.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				827FC9EC183DC395005A4D4F /* Main_iPad.storyboard */,
 				827FC9EF183DC395005A4D4F /* COINSViewController.h */,
 				827FC9F0183DC395005A4D4F /* COINSViewController.m */,
+				82FBCB12184F8EEE0018D894 /* COINSViewController2.h */,
+				82FBCB13184F8EEE0018D894 /* COINSViewController2.m */,
 				827FC9F2183DC395005A4D4F /* Images.xcassets */,
 				827FC9DE183DC395005A4D4F /* Supporting Files */,
 			);
@@ -301,6 +306,7 @@
 				82CE49A3184DB39F00B0EA6D /* COINSDrawState.m in Sources */,
 				82CE499C184D9C2C00B0EA6D /* COINSQuestionData.m in Sources */,
 				82CE49A6184DB3C100B0EA6D /* COINSDrawContext.m in Sources */,
+				82FBCB14184F8EEE0018D894 /* COINSViewController2.m in Sources */,
 				827FC9E4183DC395005A4D4F /* main.m in Sources */,
 				827FC9F1183DC395005A4D4F /* COINSViewController.m in Sources */,
 				827FC9E8183DC395005A4D4F /* COINSAppDelegate.m in Sources */,

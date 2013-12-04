@@ -1,5 +1,5 @@
 //
-//  COINSViewController.h
+//  COINSViewController2.h
 //  touchDrawing
 //
 //  Created by Shimizu Keiichi on 2013/11/21.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
-@interface COINSViewController : GLKViewController{
+@interface COINSViewController2 : GLKViewController{
     GLuint vertexBufferID;
     GLuint gridBufferID;
 }

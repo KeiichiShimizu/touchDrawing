@@ -9,27 +9,47 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="COINSViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0Ic-xY-TGo"/>
-                        <viewControllerLayoutGuide type="bottom" id="NgV-d7-9nj"/>
+                        <viewControllerLayoutGuide type="top" id="I9s-YP-YWv"/>
+                        <viewControllerLayoutGuide type="bottom" id="2jM-Yx-Mf0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GLKView">
+                    <view key="view" contentMode="scaleToFill" id="cdC-5p-ycL" customClass="GLKView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeC-jc-Qtq">
-                                <rect key="frame" x="-4" y="0.0" width="768" height="1024"/>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kol-dM-TK1">
+                                <rect key="frame" x="-15" y="-172" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </glkView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="txw-Gs-kJG" kind="embed" id="mwJ-Fg-FLa"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outletCollection property="glview" destination="JeC-jc-Qtq" id="pTf-AO-NLx"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="-174"/>
+            <point key="canvasLocation" x="-440" y="-262"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="44K-cP-k2A">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="txw-Gs-kJG" customClass="COINSViewController2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gHX-TQ-qwc"/>
+                        <viewControllerLayoutGuide type="bottom" id="YXZ-db-0Dz"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RCr-Vj-jjJ" customClass="GLKView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZU-oR-DSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="-155"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -6,14 +6,14 @@
 //  Copyright (c) 2013年 COINS Project AID. All rights reserved.
 //
 
-#import "COINSViewController.h"
+#import "COINSViewController2.h"
 
-@interface COINSViewController ()
+@interface COINSViewController2 ()
 
 @end
 
 
-@implementation COINSViewController
+@implementation COINSViewController2
 
 @synthesize baseEffect;
 @synthesize glView;
