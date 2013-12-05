@@ -55,19 +55,19 @@ static const Vertex vertices[] =
     
     self.baseEffect = [[GLKBaseEffect alloc] init];
     self.baseEffect.useConstantColor = GL_TRUE;
-    self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 0.0f, 1.0f);
-    
+    self.baseEffect.constantColor = GLKVector4Make(0.6f, 0.6f, 0.6f, 1.0f);
+
     //self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
     
     
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClearColor(0.9f, 0.9f, 0.9f, 1.0f);
     
     
-    glGenBuffers(1, &vertexBufferID);
-    glBindBuffer(GL_ARRAY_BUFFER, vertexBufferID);
+    //glGenBuffers(1, &vertexBufferID);
+    //glBindBuffer(GL_ARRAY_BUFFER, vertexBufferID);
     
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    //[self showGrid];
+   // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    [self showGrid];
     
 }
 #pragma mark - GLKView delegate
@@ -77,7 +77,7 @@ static const Vertex vertices[] =
     glClear(GL_COLOR_BUFFER_BIT);
     glEnableVertexAttribArray(GLKVertexAttribPosition);
     glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), NULL);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDrawArrays(GL_LINES, 0, 30);
 
 }
 -(void)viewDidUnload
@@ -95,8 +95,38 @@ static const Vertex vertices[] =
 -(void)showGrid{
     Vertex gridPoints[] =
     {
-        {-0.9f, 1.0f, 0.0},
-        {-0.9f, -1.0f, 0.0},
+        {{-0.8f, 1.0f, 0.0}},
+        {{-0.8f, -1.0f, 0.0}},
+        {{-0.6f, 1.0f, 0.0}},
+        {{-0.6f, -1.0f, 0.0}},
+        {{-0.4f, 1.0f, 0.0}},
+        {{-0.4f, -1.0f, 0.0}},
+        {{-0.2f, 1.0f, 0.0}},
+        {{-0.2f, -1.0f, 0.0}},
+        {{0.0f, 1.0f, 0.0}},
+        {{0.0f, -1.0f, 0.0}},
+        {{0.2f, 1.0f, 0.0}},
+        {{0.2f, -1.0f, 0.0}},
+        {{0.4f, 1.0f, 0.0}},
+        {{0.4f, -1.0f, 0.0}},
+        {{0.6f, 1.0f, 0.0}},
+        {{0.6f, -1.0f, 0.0}},
+        {{0.8f, 1.0f, 0.0}},
+        {{0.8f, -1.0f, 0.0}},
+        {{1.0f, 0.0f, 0.0}},
+        {{-1.0f, 0.0f, 0.0}},
+        {{1.0f, 0.3f, 0.0}},
+        {{-1.0f, 0.3f, 0.0}},
+        {{1.0f, 0.6f, 0.0}},
+        {{-1.0f, 0.6f, 0.0}},
+        {{1.0f, 0.9f, 0.0}},
+        {{-1.0f, 0.9f, 0.0}},
+        {{1.0f, -0.3f, 0.0}},
+        {{-1.0f, -0.3f, 0.0}},
+        {{1.0f, -0.6f, 0.0}},
+        {{-1.0f, -0.6f, 0.0}},
+        {{1.0f, -0.9f, 0.0}},
+        {{-1.0f, -0.9f, 0.0}}
         
     };
     [self.baseEffect prepareToDraw];
@@ -115,7 +145,7 @@ static const Vertex vertices[] =
     // STATIC: メモリには一度しか書き込まれないが, 何回も使われる
     // DRAW: メモリの内容はアプリケーションプログラムから書き込まれ, OpenGL による描画データとして使用される
     glBufferData(GL_ARRAY_BUFFER, sizeof(gridPoints), gridPoints, GL_STATIC_DRAW);
-    glDrawArrays(GL_LINES, 0, 2);
+    //glDrawArrays(GL_POINTS, 0, 8);
     
 }
 

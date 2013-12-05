@@ -60,7 +60,7 @@ static const Vertex vertices[] =
     //self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
     
     
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
     
     
     glGenBuffers(1, &vertexBufferID);
@@ -77,7 +77,7 @@ static const Vertex vertices[] =
     glClear(GL_COLOR_BUFFER_BIT);
     glEnableVertexAttribArray(GLKVertexAttribPosition);
     glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), NULL);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    //glDrawArrays(GL_TRIANGLES, 0, 3);
 
 }
 -(void)viewDidUnload

@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kol-dM-TK1">
-                                <rect key="frame" x="-15" y="-172" width="768" height="1024"/>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kol-dM-TK1">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="924"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -26,6 +26,12 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kol-dM-TK1" firstAttribute="leading" secondItem="cdC-5p-ycL" secondAttribute="leading" id="00f-Fm-b32"/>
+                            <constraint firstItem="2jM-Yx-Mf0" firstAttribute="top" secondItem="Kol-dM-TK1" secondAttribute="bottom" constant="100" id="7A5-Z1-67r"/>
+                            <constraint firstAttribute="trailing" secondItem="Kol-dM-TK1" secondAttribute="trailing" id="Maw-yM-OTf"/>
+                            <constraint firstItem="Kol-dM-TK1" firstAttribute="top" secondItem="cdC-5p-ycL" secondAttribute="top" id="qy3-oz-WVX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -41,7 +47,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YXZ-db-0Dz"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RCr-Vj-jjJ" customClass="GLKView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="924"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
