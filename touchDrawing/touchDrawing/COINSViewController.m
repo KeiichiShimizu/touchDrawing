@@ -55,12 +55,12 @@ static const Vertex vertices[] =
     
     self.baseEffect = [[GLKBaseEffect alloc] init];
     self.baseEffect.useConstantColor = GL_TRUE;
-    self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 0.0f, 1.0f);
+    self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 0.0f, 0.0f);
     
     //self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
     
     
-    glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
+    glClearColor(0.8f, 0.8f, 0.8f, 0.0f);
     
     
     glGenBuffers(1, &vertexBufferID);
