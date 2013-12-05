@@ -12,6 +12,7 @@
 @interface COINSViewController2 : GLKViewController{
     GLuint vertexBufferID;
     GLuint gridBufferID;
+    GLuint questionBufferID;
 }
 @property (strong, nonatomic) GLKBaseEffect *baseEffect;
 @property (strong, nonatomic) IBOutletCollection(GLKView) NSArray *glView;

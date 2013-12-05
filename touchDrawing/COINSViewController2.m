@@ -78,6 +78,8 @@ static const Vertex vertices[] =
     glEnableVertexAttribArray(GLKVertexAttribPosition);
     glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), NULL);
     glDrawArrays(GL_LINES, 0, 32);
+    
+    
 
 }
 -(void)viewDidUnload
