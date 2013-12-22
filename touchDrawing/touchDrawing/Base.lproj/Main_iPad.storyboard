@@ -12,29 +12,43 @@
                         <viewControllerLayoutGuide type="top" id="I9s-YP-YWv"/>
                         <viewControllerLayoutGuide type="bottom" id="2jM-Yx-Mf0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cdC-5p-ycL" customClass="GLKView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <view key="view" contentMode="scaleToFill" id="cdC-5p-ycL">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kol-dM-TK1">
-                                <rect key="frame" x="0.0" y="20" width="768" height="904"/>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juj-cf-5lf">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="658"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </glkView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUI-QV-K5A">
+                                <rect key="frame" x="0.0" y="686" width="125" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="txw-Gs-kJG" kind="embed" id="mwJ-Fg-FLa"/>
+                                    <action selector="rulerButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wj0-NI-oIa"/>
                                 </connections>
-                            </containerView>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Kol-dM-TK1" firstAttribute="leading" secondItem="cdC-5p-ycL" secondAttribute="leading" id="00f-Fm-b32"/>
-                            <constraint firstItem="2jM-Yx-Mf0" firstAttribute="top" secondItem="Kol-dM-TK1" secondAttribute="bottom" constant="100" id="7A5-Z1-67r"/>
-                            <constraint firstAttribute="trailing" secondItem="Kol-dM-TK1" secondAttribute="trailing" id="Maw-yM-OTf"/>
-                            <constraint firstItem="Kol-dM-TK1" firstAttribute="top" secondItem="cdC-5p-ycL" secondAttribute="top" constant="20" id="qy3-oz-WVX"/>
-                        </constraints>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dlL-LU-GsD" appends="YES" id="ndG-jZ-icW"/>
+                        </connections>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="glview" destination="Juj-cf-5lf" id="IRc-tZ-qCT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dlL-LU-GsD">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="sP0-v9-l06"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-440" y="-262"/>
         </scene>
@@ -47,7 +61,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YXZ-db-0Dz"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RCr-Vj-jjJ" customClass="GLKView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="904"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -55,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZU-oR-DSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="-155"/>
+            <point key="canvasLocation" x="805" y="45"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

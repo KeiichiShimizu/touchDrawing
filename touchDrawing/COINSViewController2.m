@@ -55,7 +55,7 @@ static const Vertex vertices[] =
     
     self.baseEffect = [[GLKBaseEffect alloc] init];
     self.baseEffect.useConstantColor = GL_TRUE;
-    self.baseEffect.constantColor = GLKVector4Make(0.6f, 0.6f, 0.6f, 0.0f);
+    self.baseEffect.constantColor = GLKVector4Make(0.6f, 0.6f, 0.6f, 1.0f);
 
     //self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
     

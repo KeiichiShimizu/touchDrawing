@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
-@interface COINSViewController : GLKViewController{
+@interface COINSViewController : UIViewController{
     GLuint vertexBufferID;
     GLuint gridBufferID;
 }
 @property (strong, nonatomic) GLKBaseEffect *baseEffect;
-@property (strong, nonatomic) IBOutletCollection(GLKView) NSArray *glView;
+
+- (IBAction)tapAction:(id)sender;
+- (IBAction)rulerButtonAction:(id)sender;
+@property (weak, nonatomic) IBOutlet GLKView *glview;
+
 
 @end

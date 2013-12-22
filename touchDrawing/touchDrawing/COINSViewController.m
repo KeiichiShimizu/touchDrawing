@@ -15,8 +15,8 @@
 
 @implementation COINSViewController
 
-@synthesize baseEffect;
-@synthesize glView;
+@synthesize baseEffect = _baseEffect;
+@synthesize glview = _glview;
 
 typedef struct {
     GLKVector3 position;
@@ -45,26 +45,31 @@ static const Vertex vertices[] =
 {
     [super viewDidLoad];
     GLKView *view = (GLKView *)self.view;
-    //GLKView *glview = (GLKView *)self.glView;
+    GLKView *glview = _glview;
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
-    view.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+ 
+    glview.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     //glview.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-    
-    [EAGLContext setCurrentContext:view.context];
+    glview.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.7 alpha:0];
+    [EAGLContext setCurrentContext:glview.context];
 
     
     self.baseEffect = [[GLKBaseEffect alloc] init];
     self.baseEffect.useConstantColor = GL_TRUE;
-    self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 0.0f, 0.0f);
+    self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 0.0f, 1.0f);
     
     //self.baseEffect.constantColor = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
     
+
     
+
     glClearColor(0.8f, 0.8f, 0.8f, 0.0f);
     
     
     glGenBuffers(1, &vertexBufferID);
     glBindBuffer(GL_ARRAY_BUFFER, vertexBufferID);
+    //[self.view]
     
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     //[self showGrid];
@@ -125,4 +130,11 @@ static const Vertex vertices[] =
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tapAction:(id)sender {
+    NSLog(@"tapped");
+    //CGPoint p = (UITapGestureRecognizer *)sender locationInView:sel
+}
+
+- (IBAction)rulerButtonAction:(id)sender {
+}
 @end
